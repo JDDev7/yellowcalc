@@ -55,11 +55,13 @@ body {
 #display p {
     color: #E5C750;
     font-family: "Bebas Neue", sans-serif;
+    text-shadow: var(--shadow-small);
 }
 
 #display span {
     color: white;
     font-family: "Oswald", sans-serif;
+    text-shadow: var(--shadow-small);
 }
 
 #product-list {
@@ -152,6 +154,7 @@ body {
     font-family: "Bebas Neue", sans-serif;
     grid-column: span 2;
     text-shadow: 2px 2px 2px black;
+    text-align: center;
 }
 
 button {
@@ -208,6 +211,7 @@ button:hover {
     color: white;
     margin: 5px 0;
     font-family: "Oswald", sans-serif;
+    text-shadow: var(--shadow-small);
 }
 
 ::-webkit-scrollbar{
