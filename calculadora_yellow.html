@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Yellow Jack | Clicksense</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="assets/logo.webp" alt="">
+        </div>
+  <div id="display">
+    <p>Precio Normal: <span id="normal-price">$0.00</span></p>
+    <p>10% Descuento: <span id="discount-10">$0.00</span></p>
+    <p>15% Descuento: <span id="discount-15">$0.00</span></p>
+    <p>20% Descuento: <span id="discount-20">$0.00</span></p>
+  </div>
+</div>
+  <div id="calculator">
+    <div class="alcohol">
+      <h2>Bebidas Alcoholicas</h2>
+      <div class="product">
+        <button onclick="addPrice(50)">Botella cerveza (50$)</button>
+        <button class="x5" onclick="addPrice(50, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(60)">Jarra cerveza (60$)</button>
+        <button class="x5" onclick="addPrice(60, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(180)">Botella tequila (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(30)">Chupito tequila (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(180)">Botella whisky (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(30)">Chupito whisky (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(180)">Botella vodka (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(30)">Chupito vodka (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(165)">Botella vino (165$)</button>
+        <button class="x5" onclick="addPrice(165, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(50)">Copa vino (50$)</button>
+        <button class="x5" onclick="addPrice(50, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(185)">Botella ron (185$)</button>
+        <button class="x5" onclick="addPrice(185, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(180)">Botella Fernet (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+      </div>
+    </div>
+    
+    <div class="non-alcohol">
+      <h2>Bebidas Sin Alcohol</h2>
+      <div class="product">
+        <button onclick="addPrice(25)">Agua (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(25)">Café (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(35)">Sprunk (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(35)">Sprunk Light (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(35)">Cola (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(35)">Cola Light (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+      </div>
+    </div>
+    
+    <div class="food">
+      <h2>Comida</h2>
+      <div class="product">
+        <button onclick="addPrice(25)">Cacahuetes (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(40)">Nachos (40$)</button>
+        <button class="x5" onclick="addPrice(40, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(25)">Aceitunas (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(70)">Chuletón (70$)</button>
+        <button class="x5" onclick="addPrice(70, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(50)">Alitas (50$)</button>
+        <button class="x5" onclick="addPrice(50, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(30)">Patatas Fritas (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+      </div>
+    </div>
+    
+    <div class="cocktails">
+      <h2>Cocktails</h2>
+      <div class="product">
+        <button onclick="addPrice(75)">Margarita Tequila (75$)</button>
+        <button class="x5" onclick="addPrice(75, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(70)">Mojito (70$)</button>
+        <button class="x5" onclick="addPrice(70, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(75)">Ron Cola (75$)</button>
+        <button class="x5" onclick="addPrice(75, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(70)">Whisky Cola (70$)</button>
+        <button class="x5" onclick="addPrice(70, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(65)">Sangria (65$)</button>
+        <button class="x5" onclick="addPrice(65, 5)">x5</button>
+      </div>
+      <div class="product">
+        <button onclick="addPrice(180)">Botella Jäggerbomb (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+      </div>
+    </div>
+    
+    <div class="special">
+      <h2>Especial</h2>
+      <button onclick="addPrice(425)">Menu Alitas Refresco (425$)</button>
+      <button onclick="addPrice(525)">Menu Chuleton Refresco (525$)</button>
+      <button onclick="addPrice(400)">Cachimba (400$)</button>
+      <button onclick="resetCalc()">Reiniciar</button>
+    </div>
+  </div>
+  <div class="businesses">
+    <div class="ten-discount">
+      <h1>Convenio 10%</h1>
+      <div class="business-names">
+        <p>Club 77</p>
+        <p>Taller Mirror</p>
+        <p>Rex Diner</p>
+        <p>Supermarket</p>
+        <p>Blazing Tattoo Shop</p>
+        <p>Autoexotic</p>
+        <p>Badu Ruta 68</p>
+        <p>Badu Central</p>
+        <p>Pawn shop</p>
+        <p>Puff Puff Pass</p>
+        <p>Benny's</p>
+        <p>Segunda Mano</p>
+        <p>Salon Tattoo</p>
+      </div>
+    </div>
+    <div class="fifteen-discount">
+      <h1>Convenio 15%</h1>
+      <div class="business-names">
+        <p>Taller Rex</p>
+        <p>Taller Beekers</p>
+        <p>Vanilla</p>
+        <p>Club Sandy</p>
+        <p>Sandyfly</p>
+        <p>Taxis</p>
+        <p>Taquería</p>
+        <p>Taller Ruta</p>
+        <p>Hen House</p>
+        <p>Badu Mirror</p>
+        <p>Paleto Tattoo</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
