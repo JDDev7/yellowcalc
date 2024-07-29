@@ -12,157 +12,161 @@
         <div class="logo">
             <img src="assets/logo.webp" alt="">
         </div>
-  <div id="display">
+  <div id="display"> <!-- añadir al display los productos que se han añadido y las cantidades-->
     <p>Precio Normal: <span id="normal-price">$0.00</span></p>
     <p>10% Descuento: <span id="discount-10">$0.00</span></p>
     <p>15% Descuento: <span id="discount-15">$0.00</span></p>
     <p>20% Descuento: <span id="discount-20">$0.00</span></p>
+  </div>
+  <div id="product-list" class="product-list">
+    <h1>Productos añadidos</h1>
   </div>
 </div>
   <div id="calculator">
     <div class="alcohol">
       <h2>Bebidas Alcoholicas</h2>
       <div class="product">
-        <button onclick="addPrice(50)">Botella cerveza (50$)</button>
-        <button class="x5" onclick="addPrice(50, 5)">x5</button>
+        <button onclick="addPrice(50, 1, 'Botella cerveza')">Botella cerveza (50$)</button>
+        <button class="x5" onclick="addPrice(50, 5, 'Botella cerveza')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(60)">Jarra cerveza (60$)</button>
-        <button class="x5" onclick="addPrice(60, 5)">x5</button>
+        <button onclick="addPrice(60, 1, 'Jarra cerveza')">Jarra cerveza (60$)</button>
+        <button class="x5" onclick="addPrice(60, 5, 'Jarra cerveza')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(180)">Botella tequila (180$)</button>
-        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+        <button onclick="addPrice(180, 1, 'Botella tequila')">Botella tequila (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5, 'Botella tequila')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(30)">Chupito tequila (30$)</button>
-        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+        <button onclick="addPrice(30, 1, 'Chupito tequila')">Chupito tequila (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5, 'Chupito tequila')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(180)">Botella whisky (180$)</button>
-        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+        <button onclick="addPrice(180, 1, 'Botella whisky')">Botella whisky (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5, 'Botella whisky')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(30)">Chupito whisky (30$)</button>
-        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+        <button onclick="addPrice(30, 1, 'Chupito whisky')">Chupito whisky (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5, 'Chupito whisky')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(180)">Botella vodka (180$)</button>
-        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+        <button onclick="addPrice(180, 1, 'Botella vodka')">Botella vodka (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5, 'Botella vodka')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(30)">Chupito vodka (30$)</button>
-        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+        <button onclick="addPrice(30, 1, 'Chupito vodka')">Chupito vodka (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5, 'Chupito vodka')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(165)">Botella vino (165$)</button>
-        <button class="x5" onclick="addPrice(165, 5)">x5</button>
+        <button onclick="addPrice(165, 1, 'Botella vino')">Botella vino (165$)</button>
+        <button class="x5" onclick="addPrice(165, 5, 'Botella vino')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(50)">Copa vino (50$)</button>
-        <button class="x5" onclick="addPrice(50, 5)">x5</button>
+        <button onclick="addPrice(50, 1, 'Copa vino')">Copa vino (50$)</button>
+        <button class="x5" onclick="addPrice(50, 5, 'Copa vino')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(185)">Botella ron (185$)</button>
-        <button class="x5" onclick="addPrice(185, 5)">x5</button>
+        <button onclick="addPrice(185, 1, 'Botella ron')">Botella ron (185$)</button>
+        <button class="x5" onclick="addPrice(185, 5, 'Botella ron')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(180)">Botella Fernet (180$)</button>
-        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+        <button onclick="addPrice(180, 1, 'Botella Fernet')">Botella Fernet (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5, 'Botella Fernet')">x5</button>
       </div>
     </div>
     
     <div class="non-alcohol">
       <h2>Bebidas Sin Alcohol</h2>
       <div class="product">
-        <button onclick="addPrice(25)">Agua (25$)</button>
-        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+        <button onclick="addPrice(25, 1, 'Agua')">Agua (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5, 'Agua')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(25)">Café (25$)</button>
-        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+        <button onclick="addPrice(25, 1, 'Café')">Café (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5, 'Café')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(35)">Sprunk (35$)</button>
-        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+        <button onclick="addPrice(35, 1, 'Sprunk')">Sprunk (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5, 'Sprunk')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(35)">Sprunk Light (35$)</button>
-        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+        <button onclick="addPrice(35, 1, 'Sprunk Light')">Sprunk Light (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5, 'Sprunk Light')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(35)">Cola (35$)</button>
-        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+        <button onclick="addPrice(35, 1, 'Cola')">Cola (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5, 'Cola')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(35)">Cola Light (35$)</button>
-        <button class="x5" onclick="addPrice(35, 5)">x5</button>
+        <button onclick="addPrice(35, 1, 'Cola Light')">Cola Light (35$)</button>
+        <button class="x5" onclick="addPrice(35, 5, 'Cola Light')">x5</button>
       </div>
     </div>
     
     <div class="food">
       <h2>Comida</h2>
       <div class="product">
-        <button onclick="addPrice(25)">Cacahuetes (25$)</button>
-        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+        <button onclick="addPrice(25, 1, 'Cacahuetes')">Cacahuetes (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5, 'Cacahuetes')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(40)">Nachos (40$)</button>
-        <button class="x5" onclick="addPrice(40, 5)">x5</button>
+        <button onclick="addPrice(40, 1, 'Nachos')">Nachos (40$)</button>
+        <button class="x5" onclick="addPrice(40, 5, 'Nachos')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(25)">Aceitunas (25$)</button>
-        <button class="x5" onclick="addPrice(25, 5)">x5</button>
+        <button onclick="addPrice(25, 1, 'Aceitunas')">Aceitunas (25$)</button>
+        <button class="x5" onclick="addPrice(25, 5, 'Aceitunas')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(70)">Chuletón (70$)</button>
-        <button class="x5" onclick="addPrice(70, 5)">x5</button>
+        <button onclick="addPrice(70, 1, 'Chuletón')">Chuletón (70$)</button>
+        <button class="x5" onclick="addPrice(70, 5, 'Chuletón')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(50)">Alitas (50$)</button>
-        <button class="x5" onclick="addPrice(50, 5)">x5</button>
+        <button onclick="addPrice(50, 1, 'Alitas')">Alitas (50$)</button>
+        <button class="x5" onclick="addPrice(50, 5, 'Alitas')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(30)">Patatas Fritas (30$)</button>
-        <button class="x5" onclick="addPrice(30, 5)">x5</button>
+        <button onclick="addPrice(30, 1, 'Patatas Fritas')">Patatas Fritas (30$)</button>
+        <button class="x5" onclick="addPrice(30, 5, 'Patatas Fritas')">x5</button>
       </div>
     </div>
     
     <div class="cocktails">
       <h2>Cocktails</h2>
       <div class="product">
-        <button onclick="addPrice(75)">Margarita Tequila (75$)</button>
-        <button class="x5" onclick="addPrice(75, 5)">x5</button>
+        <button onclick="addPrice(75, 1, 'Margarita Tequila')">Margarita Tequila (75$)</button>
+        <button class="x5" onclick="addPrice(75, 5, 'Margarita Tequila')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(70)">Mojito (70$)</button>
-        <button class="x5" onclick="addPrice(70, 5)">x5</button>
+        <button onclick="addPrice(70, 1, 'Mojito')">Mojito (70$)</button>
+        <button class="x5" onclick="addPrice(70, 5, 'Mojito')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(75)">Ron Cola (75$)</button>
-        <button class="x5" onclick="addPrice(75, 5)">x5</button>
+        <button onclick="addPrice(75, 1, 'Ron Cola')">Ron Cola (75$)</button>
+        <button class="x5" onclick="addPrice(75, 5, 'Ron Cola')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(70)">Whisky Cola (70$)</button>
-        <button class="x5" onclick="addPrice(70, 5)">x5</button>
+        <button onclick="addPrice(70, 1, 'Whisky Cola')">Whisky Cola (70$)</button>
+        <button class="x5" onclick="addPrice(70, 5, 'Whisky Cola')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(65)">Sangria (65$)</button>
-        <button class="x5" onclick="addPrice(65, 5)">x5</button>
+        <button onclick="addPrice(65, 1, 'Sangria')">Sangria (65$)</button>
+        <button class="x5" onclick="addPrice(65, 5, 'Sangria')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(180)">Botella Jäggerbomb (180$)</button>
-        <button class="x5" onclick="addPrice(180, 5)">x5</button>
+        <button onclick="addPrice(180, 1, 'Botella Jäggerbomb')">Botella Jäggerbomb (180$)</button>
+        <button class="x5" onclick="addPrice(180, 5, 'Botella Jäggerbomb')">x5</button>
       </div>
     </div>
     
     <div class="special">
       <h2>Especial</h2>
-      <button onclick="addPrice(425)">Menu Alitas Refresco (425$)</button>
-      <button onclick="addPrice(525)">Menu Chuleton Refresco (525$)</button>
-      <button onclick="addPrice(400)">Cachimba (400$)</button>
+      <button onclick="addPrice(425, 1, 'Menu Alitas Refresco')">Menu Alitas Refresco (425$)</button>
+      <button onclick="addPrice(525, 1, 'Menu Chuleton Refresco')">Menu Chuleton Refresco (525$)</button>
+      <button onclick="addPrice(400, 1, 'Cachimba')">Cachimba (400$)</button>
       <button onclick="resetCalc()">Reiniciar</button>
     </div>
+    
   </div>
   <div class="businesses">
     <div class="ten-discount">

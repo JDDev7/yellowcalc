@@ -12,6 +12,7 @@ body {
 
 :root{
     --shadow: 3px 3px 3px black;
+    --shadow-small: 2px 2px 2px black;
 }
 
 .header {
@@ -60,6 +61,53 @@ body {
     color: white;
     font-family: "Oswald", sans-serif;
 }
+
+#product-list {
+    background-color: #4f4f4f;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    width: 20rem;
+    height: 8rem;
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para el título */
+    grid-template-rows: auto 1fr; /* Auto para el título, 1fr para los productos */
+    box-shadow: var(--shadow);
+    margin-left: 1rem;
+    justify-content: space-between;
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    text-align: start; /* Centrar el texto del título */
+    
+}
+
+#product-list h1 {
+    color: #E5C750;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem; /* Añadir margen debajo del título */
+    text-align: center; /* Asegurar que el título esté centrado */
+    flex-shrink: 0; /* Prevenir que el h1 se reduzca */
+    text-shadow: var(--shadow-small);
+}
+
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+  }
+
+#product-container p {
+    font-size: 0.8rem;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    flex-shrink: 0; /* Prevenir que los párrafos se reduzcan */
+    text-align: left; /* Alineación a la izquierda para los productos */
+    text-shadow: var(--shadow);
+    padding: 0;
+    margin: 0;
+}
+
+
 
 .alcohol, .non-alcohol, .food, .cocktails, .special {
     background-color: #3c3c3c;
@@ -160,4 +208,15 @@ button:hover {
     color: white;
     margin: 5px 0;
     font-family: "Oswald", sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 0.6rem;
+    background-color: #3c3c3c;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #d4b048 0%, #735a10 100%);
+    border-radius: 10px;
 }
