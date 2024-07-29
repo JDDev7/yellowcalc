@@ -41,7 +41,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    width: 16rem;
+    width: 20rem;
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -132,10 +132,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 1rem;
     gap: 1rem;
     width: 70%;
     box-shadow: var(--shadow);
+    margin-bottom: 1rem;
 }
 
 .businesses div {
