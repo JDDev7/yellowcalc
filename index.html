@@ -17,6 +17,9 @@
     <p>10% Descuento: <span id="discount-10">$0.00</span></p>
     <p>15% Descuento: <span id="discount-15">$0.00</span></p>
     <p>20% Descuento: <span id="discount-20">$0.00</span></p>
+    <div class="restart">
+      <button onclick="resetCalc()">Reiniciar</button>
+    </div>
   </div>
   <div id="product-list" class="product-list">
     <h1>Productos añadidos</h1>
@@ -74,9 +77,11 @@
         <button class="x5" onclick="addPrice(180, 5, 'Botella Fernet')">x5</button>
       </div>
     </div>
-    
+    <div class="sections-container">
     <div class="non-alcohol">
+      <div class="title">
       <h2>Bebidas Sin Alcohol</h2>
+    </div>
       <div class="product">
         <button onclick="addPrice(25, 1, 'Agua')">Agua (25$)</button>
         <button class="x5" onclick="addPrice(25, 5, 'Agua')">x5</button>
@@ -104,7 +109,9 @@
     </div>
     
     <div class="food">
+      <div class="title">
       <h2>Comida</h2>
+    </div>
       <div class="product">
         <button onclick="addPrice(25, 1, 'Cacahuetes')">Cacahuetes (25$)</button>
         <button class="x5" onclick="addPrice(25, 5, 'Cacahuetes')">x5</button>
@@ -132,7 +139,9 @@
     </div>
     
     <div class="cocktails">
+      <div class="title">
       <h2>Cocktails</h2>
+    </div>
       <div class="product">
         <button onclick="addPrice(75, 1, 'Margarita Tequila')">Margarita Tequila (75$)</button>
         <button class="x5" onclick="addPrice(75, 5, 'Margarita Tequila')">x5</button>
@@ -154,19 +163,20 @@
         <button class="x5" onclick="addPrice(65, 5, 'Sangria')">x5</button>
       </div>
       <div class="product">
-        <button onclick="addPrice(180, 1, 'Botella Jäggerbomb')">Botella Jäggerbomb (180$)</button>
+        <button onclick="addPrice(180, 1, 'Botella Jägger')">Botella Jägger (180$)</button>
         <button class="x5" onclick="addPrice(180, 5, 'Botella Jäggerbomb')">x5</button>
       </div>
     </div>
     
     <div class="special">
+      <div class="title">
       <h2>Especial</h2>
+    </div>
       <button onclick="addPrice(425, 1, 'Menu Alitas Refresco')">Menu Alitas Refresco (425$)</button>
       <button onclick="addPrice(525, 1, 'Menu Chuleton Refresco')">Menu Chuleton Refresco (525$)</button>
       <button onclick="addPrice(400, 1, 'Cachimba')">Cachimba (400$)</button>
-      <button onclick="resetCalc()">Reiniciar</button>
     </div>
-    
+  </div>
   </div>
   <div class="businesses">
     <div class="ten-discount">
