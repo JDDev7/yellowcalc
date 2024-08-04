@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    width: 100%;
     background-image: url('assets/header-bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,7 +96,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
     gap: 10px; /* Espacio entre los elementos de la cuadrícula */
-  }
+}
 
 #product-container p {
     font-size: 0.8rem;
@@ -235,7 +235,7 @@ button:hover {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: c;
+    justify-content: center;
 }
 
 
@@ -367,6 +367,7 @@ button:hover {
         background-color: #4f4f4f;
         display: flex;
         flex-direction: row;
+        width: 100%;
         gap: 0.5rem;
         padding: 10px;
         border-radius: 10px;
@@ -406,4 +407,144 @@ button:hover {
         height: 20px;
         font-size: 10px;
     }
+}
+
+@media (min-width: 380px) and (max-width: 430px){
+    .header {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header img{
+        width: 10rem;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    #calculator {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem; /* Añade espacio entre las secciones */
+    }
+    
+    #display {
+        background-color: #4f4f4f;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 3px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+        grid-template-rows: repeat(1,auto);
+        box-shadow: var(--shadow);
+    
+    }
+    
+    #display p {
+        color: #E5C750;
+        font-family: "Bebas Neue", sans-serif;
+        text-shadow: var(--shadow-small);
+    }
+    
+    #display span {
+        color: white;
+        font-family: "Oswald", sans-serif;
+        text-shadow: var(--shadow-small);
+    }
+    
+    #product-list {
+        background-color: #4f4f4f;
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        width: 20rem;
+        height: 8rem;
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna para el título */
+        grid-template-rows: auto 1fr; /* Auto para el título, 1fr para los productos */
+        box-shadow: var(--shadow);
+        margin-left: 1rem;
+        justify-content: space-between;
+        overflow-y: auto; /* Habilitar desplazamiento vertical */
+        text-align: start; /* Centrar el texto del título */
+        
+    }
+    
+    #product-list h1 {
+        color: #E5C750;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem; /* Añadir margen debajo del título */
+        text-align: center; /* Asegurar que el título esté centrado */
+        flex-shrink: 0; /* Prevenir que el h1 se reduzca */
+        text-shadow: var(--shadow-small);
+    }
+    
+    #product-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+        gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+      }
+    
+    #product-container p {
+        font-size: 0.7rem;
+        color: white;
+        font-family: "Oswald", sans-serif;
+        flex-shrink: 0; /* Prevenir que los párrafos se reduzcan */
+        text-align: left; /* Alineación a la izquierda para los productos */
+        text-shadow: var(--shadow);
+        padding: 0;
+        margin: 0;
+    }
+    .alcohol, .non-alcohol, .food, .cocktails, .special {
+        background-color: #3c3c3c;
+        padding: 20px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Añade espacio entre los botones */
+        width: 100%;
+        box-shadow: var(--shadow);
+    }
+    
+    /* Estilo para el contenedor del producto y el botón x5 */
+    .product {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px; /* Espacio entre el producto y el botón x5 */
+        margin-bottom: 10px; /* Espacio debajo de cada producto */
+    }
+    
+    .x5 {
+        padding: 5px;
+        font-size: 1rem; /* Tamaño de fuente más pequeño para el botón x5 */
+        width: 40px;
+        height: 40px; /* Ancho fijo para el botón x5 */
+        text-align: center; /* Centrar el texto del botón x5 */
+        background-color: #d4b048; /* Opcional: color de fondo del botón x5 */
+    }
+    
+    
+    .alcohol h2, .non-alcohol h2, .food h2, .cocktails h2, .special h2 {
+        color: white;
+        margin-bottom: 10px;
+        font-family: "Bebas Neue", sans-serif;
+        grid-column: span 2;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+    }
+    
 }

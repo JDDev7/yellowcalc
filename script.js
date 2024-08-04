@@ -54,3 +54,26 @@ function resetCalc() {
     updatePrices();
     updateProductList();
 }
+
+
+function handleResize() {
+    const minWidth = 380;
+    const maxWidth = 430;
+    const container = document.getElementById('sections-container');
+    const parent = document.getElementById('calculator');
+
+    if (window.innerWidth >= minWidth && window.innerWidth <= maxWidth) {
+        if (container) {
+            // Mueve todos los hijos del contenedor al padre
+            while (container.firstChild) {
+                parent.appendChild(container.firstChild);
+            }
+            // Elimina el contenedor
+            container.remove();
+        }
+    }
+}
+
+// Llama a handleResize en el cargado inicial y en el redimensionamiento de la ventana
+window.addEventListener('resize', handleResize);
+window.addEventListener('load', handleResize);
