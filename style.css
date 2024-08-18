@@ -239,14 +239,139 @@ button:hover {
 }
 
 
-@media (min-width: 768px) and (max-width: 968px) {
+@media (768px <= width <= 968px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header img {
+        width: 100%;
+        display: block;
+        margin: 0px;
+    }
+
+    .logo {
+        display: block;
+        max-width: 20%;
+    }
+
     button {
-        font-size: 0.52rem;
+        font-size: 0.8rem;
     }
 
     .x5 {
-        height: 20px;
-        font-size: 10px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .header {
+        width: 90%;
+    }
+
+    #display {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+    #calculator {
+        display: grid;
+        width: 95%;
+    }
+
+    #product-list {
+        width: 15rem;
+        height: 7rem;
+    }
+
+
+
+    .non-alcohol, .food, .cocktails{
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna para el título */
+        text-align: center; /* Centra el contenido del título */
+    }
+
+    .non-alcohol .title, .food .title, .cocktails .title {
+        grid-column: 1 / -1; /* El título ocupa toda la columna */
+    }
+
+    .sections-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para Non-Alcohol y Food */
+        gap: 1rem; /* Espacio entre las columnas y secciones */
+        justify-items: center; /* Centra las secciones en la columna */
+        width: 100%;
+    }
+
+    .non-alcohol, .food {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* Dos columnas para cada sección */
+        grid-template-rows: repeat(3, auto);    /* Filas automáticas */
+        gap: 10px; /* Espacio entre los elementos dentro de cada sección */
+        width: 90%; /* Asegura que cada sección ocupe el ancho disponible */
+    }
+
+    .cocktails{
+        grid-column: span 2; /* Hace que Cocktails y Special ocupen las dos columnas */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* Dos columnas */
+        grid-template-rows: repeat(3, auto);    /* Filas automáticas */
+        gap: 10px; /* Espacio entre los elementos dentro de cada sección */
+        justify-self: center; /* Centra la sección en su contenedor */
+        width: 95%; /* Controla el ancho de las secciones Cocktails y Special */
+    }
+
+    .special {
+        display: grid;
+        grid-column: span 2;
+        align-items: center;
+        width: 95%; /* Ancho de la sección */
+        margin: 0 auto; /* Centrará la sección horizontalmente */
+    }
+    
+    .special .title {
+        text-align: center; /* Centra el título horizontalmente */
+        width: 100%; /* Asegura que el título ocupe todo el ancho */
+    }
+
+    .businesses {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+    
+    .businesses .ten-discount,
+    .businesses .fifteen-discount {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .businesses .business-names {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+    
+    .businesses .business-names p {
+        flex-basis: 25%; /* Cada elemento ocupa el 50% del contenedor, garantizando 2 columnas */
+        box-sizing: border-box; /* Asegura que padding y border no afecten el ancho total */
+        margin: 0; /* Elimina márgenes si es necesario */
+        
+    }
+    .x5 {
+        padding: 5px;
+        font-size: 1rem; /* Tamaño de fuente más pequeño para el botón x5 */
+        width: 40px;
+        height: 40px; /* Ancho fijo para el botón x5 */
+        text-align: center; /* Centrar el texto del botón x5 */
+        background-color: #d4b048; /* Opcional: color de fondo del botón x5 */
     }
 }
 
@@ -288,6 +413,8 @@ button:hover {
         grid-template-rows: repeat(2, auto);
         box-shadow: var(--shadow);
     }
+
+    
 
     .alcohol {
         display: grid;
@@ -408,8 +535,7 @@ button:hover {
         font-size: 10px;
     }
 }
-
-@media (min-width: 380px) and (max-width: 430px){
+@media (380px <= width <= 430px ){
     .header {
         margin: 1rem;
         display: flex;
@@ -428,7 +554,7 @@ button:hover {
     #calculator {
         max-width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 1rem; /* Añade espacio entre las secciones */
     }
     
@@ -437,7 +563,7 @@ button:hover {
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
-        width: 100%;
+        width: 95%;
         height: fit-content;
         display: grid;
         align-items: center;
@@ -469,6 +595,7 @@ button:hover {
         border-radius: 10px;
         margin-bottom: 5px;
         width: 20rem;
+        margin-right: 1rem;
         height: 8rem;
         display: grid;
         grid-template-columns: 1fr; /* Una columna para el título */
@@ -507,9 +634,17 @@ button:hover {
         padding: 0;
         margin: 0;
     }
+
+    .sections-container {
+        display: flex;
+        flex-direction: column;
+        width: 23rem;
+    }
+
+
     .alcohol, .non-alcohol, .food, .cocktails, .special {
         background-color: #3c3c3c;
-        padding: 20px;
+        padding: 0;
         border-radius: 2rem;
         display: flex;
         flex-direction: column;
@@ -517,17 +652,56 @@ button:hover {
         gap: 1rem; /* Añade espacio entre los botones */
         width: 100%;
         box-shadow: var(--shadow);
+        padding-bottom: 1rem;
     }
     
     /* Estilo para el contenedor del producto y el botón x5 */
     .product {
         display: flex;
+        width: 90%;
         align-items: center;
         justify-content: center;
         gap: 5px; /* Espacio entre el producto y el botón x5 */
         margin-bottom: 10px; /* Espacio debajo de cada producto */
     }
     
+    .special {
+        padding-bottom: 1rem;
+        height: 100%;
+    }
+
+    .special button {
+        width: 90%;
+
+    }
+
+    .businesses {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .businesses .ten-discount,
+    .businesses .fifteen-discount {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .businesses .business-names {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 0.8rem;
+    }
+    
+    .businesses .business-names p {
+        flex-basis: 30%; /* Cada elemento ocupa el 50% del contenedor, garantizando 2 columnas */
+        box-sizing: border-box; /* Asegura que padding y border no afecten el ancho total */
+        margin: 0; /* Elimina márgenes si es necesario */
+        
+    }
     .x5 {
         padding: 5px;
         font-size: 1rem; /* Tamaño de fuente más pequeño para el botón x5 */
