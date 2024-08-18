@@ -535,7 +535,7 @@ button:hover {
         font-size: 10px;
     }
 }
-@media (min-width: 380px) and (max-width: 767px){
+@media (min-width: 300px) and (max-width: 767px){
     .header {
         margin: 1rem;
         display: flex;
