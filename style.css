@@ -535,7 +535,7 @@ button:hover {
         font-size: 10px;
     }
 }
-@media (380px <= width <= 480px ){
+@media (380px <= width <= 767px ){
     .header {
         margin: 1rem;
         display: flex;
