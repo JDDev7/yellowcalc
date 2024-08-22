@@ -375,7 +375,7 @@ button:hover {
     }
 }
 
-@media (min-width: 968px) and (max-width: 1368px) {
+@media (968px <= width <= 1480px) {
     .header {
         margin: 1rem;
         display: flex;
@@ -392,10 +392,11 @@ button:hover {
 
     #calculator {
         max-width: 100%;
-        padding: 0.5rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         gap: 1rem; /* Añade espacio entre las secciones */
+        
     }
 
     #display {
@@ -427,7 +428,7 @@ button:hover {
 
 
     button{
-        font-size: 60px;
+        font-size: 0.7rem;
         padding: 0.2rem;
     }
     .x5 {
@@ -556,6 +557,7 @@ button:hover {
         display: flex;
         flex-direction: column;
         gap: 1rem; /* Añade espacio entre las secciones */
+        
     }
     
     #display {
