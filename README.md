@@ -8,8 +8,6 @@ Al clicar en los productos se van añadiendo al precio de arriba, poniendo el to
 
 ### Por hacer:
 
-- Hacerlo responsive para usarlo en cualquier dispositivo
-
 - Añadir la posibilidad de conectarlo a un google spreadsheets para añadir y quitar negocios de los <p> de los convenios.
 
 
